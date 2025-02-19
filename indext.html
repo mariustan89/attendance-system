@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Attendance</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+    <h1>Worker Attendance System</h1>
+
+    <!-- QR Code Scanner -->
+    <div id="reader" style="width: 300px; margin: auto;"></div>
+    <p>Scanned Worker ID: <span id="workerID"></span></p>
+
+    <button onclick="clockInOut()">Clock In/Out</button>
+
+    <h2>Attendance Records</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Worker ID</th>
+                <th>Clock In</th>
+                <th>Clock Out</th>
+                <th>Total Hours</th>
+            </tr>
+        </thead>
+        <tbody id="attendanceTable"></tbody>
+    </table>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
